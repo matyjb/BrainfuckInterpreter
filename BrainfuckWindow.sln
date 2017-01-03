@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainfuckWindow", "BrainfuckWindow\BrainfuckWindow.csproj", "{859AD5DA-E498-4F2B-B75B-A4AA99F42BF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainfuckCompiler", "BrainfuckCompiler\BrainfuckCompiler.csproj", "{B1BBD245-B4BF-41C1-81C0-8E7802BC3F44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FromBrainfuckToStringOutput", "FromBrainfuckToStringOutput\FromBrainfuckToStringOutput.csproj", "{55E4BCCD-DDB6-4A6A-ACEB-70457EC89641}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{859AD5DA-E498-4F2B-B75B-A4AA99F42BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{859AD5DA-E498-4F2B-B75B-A4AA99F42BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{859AD5DA-E498-4F2B-B75B-A4AA99F42BF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1BBD245-B4BF-41C1-81C0-8E7802BC3F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1BBD245-B4BF-41C1-81C0-8E7802BC3F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1BBD245-B4BF-41C1-81C0-8E7802BC3F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1BBD245-B4BF-41C1-81C0-8E7802BC3F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E4BCCD-DDB6-4A6A-ACEB-70457EC89641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E4BCCD-DDB6-4A6A-ACEB-70457EC89641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E4BCCD-DDB6-4A6A-ACEB-70457EC89641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E4BCCD-DDB6-4A6A-ACEB-70457EC89641}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
