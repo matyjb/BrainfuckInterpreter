@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrainfuckCompiler
+namespace 
 {
-    public class Main
+    public class BrainfuckToString
     {
-        int pointer = 0;
+        int pointerCell = 0;
+        int pointerString = 0;
         int[] cells;
         string output = "";
 
@@ -35,8 +36,37 @@ namespace BrainfuckCompiler
         public string Compile(string code)
         {
             CheckCode(code); //Repair/message/something
-            cells = InitializeCells(code.Count(f => f == '<'), code.Count(f => f == '>'), out pointer);
+            cells = InitializeCells(code.Count(f => f == '<'), code.Count(f => f == '>'), out pointerCell);
 
+            //MAINLOOP
+            while(pointerString < code.Length)
+            {
+                switch(code[pointerString])
+                {
+                    case '+':
+                        cells[pointerCell]++;
+                        break;
+                    case '-':
+                        cells[pointerCell]--;
+                        break;
+                    case '<':
+                        pointerCell--;
+                        break;
+                    case '>':
+                        pointerCell++;
+                        break;
+                    case ',':
+                        Console.ReadLine();
+                        break;
+                    case '.':
+
+                        break;
+                    case ']':
+
+                        break;
+                }
+                pointerString++;
+            }
 
 
 
