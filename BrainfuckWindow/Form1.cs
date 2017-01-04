@@ -29,11 +29,11 @@ namespace BrainfuckWindow
     }
     public class BrainfuckToString
     {
-        
+
 
         private static bool CheckCode(string code)
         {
-            
+
             //+check loops
             //+check inf loops
             return true;
@@ -51,17 +51,31 @@ namespace BrainfuckWindow
 
         public static string Execute(string code, string input)
         {
-            
+
             int pointerCell = 0;
             int pointerString = 0;
             byte[] cells;
             string output = "";
             CheckCode(code); //Repair/message/something
-            cells = InitializeCells(code.Count(f => f == '<'), code.Count(f => f == '>'), out pointerCell);
+            int from = code.Count(f => f == '<'), to = code.Count(f => f == '>');
+            cells = InitializeCells(from, to, out pointerCell);
 
             //MAINLOOP
             while (pointerString < code.Length)
             {
+                if (pointerCell >= cells.Length)
+                {
+                    Array.Resize(ref cells, cells.Length + 1);
+                }
+                else if (pointerCell < 0)
+                {
+                    Array.Resize(ref cells, cells.Length + 1);
+                    for (int i = cells.Length - 1; i > 0; i--)
+                        cells[i] = cells[i - 1];
+                    cells[0] = 0;
+                    pointerCell++;
+                }
+
                 switch (code[pointerString])
                 {
                     case '+':
@@ -77,7 +91,7 @@ namespace BrainfuckWindow
                         pointerCell++;
                         break;
                     case ',':
-                        if(input == "")
+                        if (input == "")
                         {
                             cells[pointerCell] = 0;
                         }
@@ -102,7 +116,7 @@ namespace BrainfuckWindow
                                 if (code[pointerString] == '[')
                                     a--;
                             } while (a != 0);
-                        }                        
+                        }
                         break;
                 }
                 pointerString++;

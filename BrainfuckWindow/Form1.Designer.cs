@@ -38,7 +38,7 @@
             // 
             // codeBox
             // 
-            this.codeBox.Location = new System.Drawing.Point(63, 12);
+            this.codeBox.Location = new System.Drawing.Point(12, 12);
             this.codeBox.Multiline = true;
             this.codeBox.Name = "codeBox";
             this.codeBox.Size = new System.Drawing.Size(284, 121);
@@ -51,7 +51,7 @@
             // 
             // outputBox
             // 
-            this.outputBox.Location = new System.Drawing.Point(63, 222);
+            this.outputBox.Location = new System.Drawing.Point(12, 194);
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
             this.outputBox.Size = new System.Drawing.Size(284, 121);
@@ -59,9 +59,9 @@
             // 
             // bCompile
             // 
-            this.bCompile.Location = new System.Drawing.Point(160, 162);
+            this.bCompile.Location = new System.Drawing.Point(12, 165);
             this.bCompile.Name = "bCompile";
-            this.bCompile.Size = new System.Drawing.Size(75, 23);
+            this.bCompile.Size = new System.Drawing.Size(284, 23);
             this.bCompile.TabIndex = 3;
             this.bCompile.Text = "execute";
             this.bCompile.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(63, 139);
+            this.inputBox.Location = new System.Drawing.Point(12, 139);
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(284, 20);
             this.inputBox.TabIndex = 4;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 369);
+            this.ClientSize = new System.Drawing.Size(309, 332);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.bCompile);
             this.Controls.Add(this.outputBox);
