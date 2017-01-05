@@ -1,2 +1,2 @@
-# BrainfuckCompiler
-Simple Brainfuck compiler in Windows Forms
+# BrainfuckInterpreter
+Simple Brainfuck interpreter in Windows Forms
