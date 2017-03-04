@@ -38,7 +38,6 @@ namespace BrainfuckWindow
             return true;
         }
 
-
         private static byte[] InitializeCells(int from, int to, out int startcell)
         {
 
@@ -85,7 +84,7 @@ namespace BrainfuckWindow
                         break;
                     case '<':
                         pointerCell--;
-                        if(pointerCell < 0)
+                        if (pointerCell < 0)
                         {
                             Array.Resize(ref cells, cells.Length + 1);
                             for (int i = cells.Length - 1; i > 0; i--)
@@ -96,8 +95,11 @@ namespace BrainfuckWindow
                         break;
                     case '>':
                         pointerCell++;
-                        Array.Resize(ref cells, cells.Length + 1);
-                        cells[cells.Length - 1] = 0;
+                        if (cells.Length <= pointerCell)
+                        {
+                            Array.Resize(ref cells, cells.Length + 1);
+                            cells[cells.Length - 1] = 0;
+                        }
                         break;
                     case ',':
                         if (input == "")
