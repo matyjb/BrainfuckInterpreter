@@ -37,13 +37,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bHelp = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lEOF = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bCompile
             // 
             this.bCompile.Location = new System.Drawing.Point(12, 165);
             this.bCompile.Name = "bCompile";
-            this.bCompile.Size = new System.Drawing.Size(284, 23);
+            this.bCompile.Size = new System.Drawing.Size(285, 23);
             this.bCompile.TabIndex = 3;
             this.bCompile.Text = "execute!";
             this.bCompile.UseVisualStyleBackColor = true;
@@ -72,10 +74,10 @@
             // outputBox
             // 
             this.outputBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.outputBox.Location = new System.Drawing.Point(15, 210);
+            this.outputBox.Location = new System.Drawing.Point(15, 226);
             this.outputBox.Name = "outputBox";
             this.outputBox.ReadOnly = true;
-            this.outputBox.Size = new System.Drawing.Size(246, 105);
+            this.outputBox.Size = new System.Drawing.Size(246, 89);
             this.outputBox.TabIndex = 7;
             this.outputBox.Text = "";
             // 
@@ -102,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 194);
+            this.label3.Location = new System.Drawing.Point(12, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 10;
@@ -118,13 +120,37 @@
             // 
             // bHelp
             // 
-            this.bHelp.Location = new System.Drawing.Point(267, 208);
+            this.bHelp.Location = new System.Drawing.Point(267, 226);
             this.bHelp.Name = "bHelp";
-            this.bHelp.Size = new System.Drawing.Size(30, 107);
+            this.bHelp.Size = new System.Drawing.Size(30, 89);
             this.bHelp.TabIndex = 12;
             this.bHelp.Text = "H E L P";
             this.bHelp.UseVisualStyleBackColor = true;
             this.bHelp.Click += new System.EventHandler(this.bHelp_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.Items.AddRange(new object[] {
+            "-1",
+            "0",
+            "10",
+            "13",
+            "no change"});
+            this.comboBox1.Location = new System.Drawing.Point(202, 195);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(95, 21);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // lEOF
+            // 
+            this.lEOF.AutoSize = true;
+            this.lEOF.Location = new System.Drawing.Point(171, 198);
+            this.lEOF.Name = "lEOF";
+            this.lEOF.Size = new System.Drawing.Size(28, 13);
+            this.lEOF.TabIndex = 14;
+            this.lEOF.Text = "EOF";
             // 
             // Form1
             // 
@@ -132,6 +158,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(309, 332);
+            this.Controls.Add(this.lEOF);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.bHelp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,6 +187,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bHelp;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lEOF;
     }
 }
 
